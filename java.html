@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cut and Double-Click Event Example</title>
+</head>
+<style type="text/css">
+	body{
+		font-family: Franklin Gothic;
+		background-image: radial-gradient(#406E8E, #161925 140%);
+		background-attachment: fixed;
+	}
+	.box{
+		background-image: linear-gradient(#23395B,#161925);
+		border-radius: 15px;
+		color: floralwhite;
+
+	}
+	.center{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 25vh;
+	}
+	input[type=text]{
+		height: 40px;
+		margin: 15px;
+		font-size: 24px;
+		text-align: center;
+		border-radius: 5px;
+		border-style: none;	
+	}
+	h1{
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="center">
+		<div class="box">
+			<h1>Cut Me</h1>
+			<h1>v</h1>
+			<input type="text" id="dfg">
+			<h1>^</h1>
+			<h1>Double Click Me</h1>
+		</div>
+	</div>
+		
+<script>
+const txt = document.getElementById("dfg");
+txt.addEventListener("cut", handleCut);
+txt.addEventListener("dblclick", handleDoubleClick);
+
+function handleCut(event){
+    alert("Text has been cut!");
+}
+
+function handleDoubleClick(event){
+    alert("Double-clicked!");
+}
+	
+</script>
+
+</body>
+</html>
